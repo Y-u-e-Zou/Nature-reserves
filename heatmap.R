@@ -2,10 +2,12 @@
 
 #α各样点分属谱系_保护区内外
 library(picante) 
-otuZY_1 <- read.csv("α多样性各样点分属_1.9.2.3_9.4谱系.csv", header=T, row.names = 1)
+otuZY_1 <- read.csv("Table S4.csv", header=T, row.names = 1)
 
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+meta1 <- read.table("Table S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
+#筛选谱系列
+otuZY_1 <- otuZY_1[, c("PD_whole_tree_Cav", "PD_whole_tree_Dic", "PD_whole_tree_Pol", "PD_whole_tree_Hag", "PD_whole_tree_Rap")]
 otuZY_1
 
 #删除meta1的Disturbance
@@ -121,12 +123,13 @@ dev.off()
 
 #α各样点分属谱系_仅保护区内
 library(picante) 
-otuZY_1 <- read.csv("α多样性各样点分属_1.9.2.3_9.4谱系.csv", header=T, row.names = 1)
+otuZY_1 <- read.csv("Table S4.csv", header=T, row.names = 1)
 
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+meta1 <- read.table("Table S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
+#筛选谱系列
+otuZY_1 <- otuZY_1[, c("PD_whole_tree_Cav", "PD_whole_tree_Dic", "PD_whole_tree_Pol", "PD_whole_tree_Hag", "PD_whole_tree_Rap")]
 otuZY_1
-
 #去掉Nature_Reserve列
 meta1 <- meta1[,-which(c(names(meta1) == "Nature_Reserve"))]
 meta1
@@ -261,9 +264,9 @@ dev.off()
 
 #α各样点分属各类多样性-保护区内外
 
-otuZY_1 <- read.csv("α多样性各样点分属_1.9.2.3_9.4各类多样性.csv", header=T, row.names = 1)
+otuZY_1 <- read.csv("Table S4.csv", header=T, row.names = 1)
 
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+meta1 <- read.table("Table S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 otuZY_1
 
@@ -402,9 +405,9 @@ dev.off()
 
 #α各样点分属各类多样性_仅保护区内
 library(picante) 
-otuZY_1 <- read.csv("α多样性各样点分属_1.9.2.3_9.4各类多样性.csv", header=T, row.names = 1)
+otuZY_1 <- read.csv("Table S4.csv", header=T, row.names = 1)
 
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+meta1 <- read.table("Table S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 otuZY_1
 
@@ -547,8 +550,8 @@ dev.off()
 #============================================================================================
 #1.7.3.1保护区内α多样性和环境_1.7.2
 library(picante) 
-otuZY_1 <- read.csv("α多样性计算结果谱系-ZY_1.7.2.csv", header=T, row.names = 1)
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+otuZY_1 <- read.csv("Table S5.csv", header=T, row.names = 1)
+meta1 <- read.table("Table S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 #去掉Nature_Reserve列
 meta1 <- meta1[,-which(c(names(meta1) == "Nature_Reserve"))]
@@ -687,10 +690,10 @@ dev.off()
 
 #各物种clones多样性_仅保护区内
 library(picante) 
-otuZY_1 <- read.table("1.7.1_clones_g-1_R.txt", header=T, 
+otuZY_1 <- read.table("Table S1.txt", header=T, 
                       sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+meta1 <- read.table("Table S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 otuZY_1 <- t(otuZY_1)
 

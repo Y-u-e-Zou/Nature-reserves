@@ -10,7 +10,7 @@ library(grid)
 circle_size = unit(1, 'snpc')    #规定圈图单位是像素（grid包的功能）
 
 
-group2 <- read.delim('3.2.3.3_sample-metadata_simple_next_mix_in_near_RENAME_R.txt', sep = '\t', stringsAsFactors = FALSE)
+group2 <- read.delim('Table S7.txt', sep = '\t', stringsAsFactors = FALSE)
 
 Jilin_group2 <- subset(group2, SampleID %in% c("Within_Changbai_Mountain_Nature_Reserve_2018", "Near_Changbai_Mountain_Nature_Reserve_2018"))
 Jilin_group2
@@ -27,7 +27,7 @@ all_sample <- group$"SampleID"                                                  
 all_sample
 
 
-otu_table2 <- read.delim('1.9.2.3_clones_mix_in_near_clones_g-1_RENAME_R.txt', sep = '\t')
+otu_table2 <- read.delim('Table S2.txt', sep = '\t')
 
 Jilin_otu_table1 <- otu_table2[-which(c(otu_table2$Near_Changbai_Mountain_Nature_Reserve_2018 == 0.0 & otu_table2$Within_Changbai_Mountain_Nature_Reserve_2018 == 0.0)),]       ##取2018长白拥有clone的物种
 Jilin_otu_table1
@@ -38,7 +38,7 @@ Jilin_otu_table2
 Jilin_otu_table2$OTUID
 
 
-taxonomy2 <- read.delim('4.1_taxonomy_KPCOFGS_R.txt', sep = '\t', stringsAsFactors = FALSE)    #或者read.delim(file.choose(), sep = '\t', stringsAsFactors = FALSE)
+taxonomy2 <- read.delim('Table S9.txt', sep = '\t', stringsAsFactors = FALSE)    #或者read.delim(file.choose(), sep = '\t', stringsAsFactors = FALSE)
 
 
 
@@ -232,7 +232,7 @@ library(grid)
 circle_size = unit(1, 'snpc')    #规定圈图单位是像素（grid包的功能）
 
 
-group2 <- read.delim('3.2.3.3_sample-metadata_simple_next_mix_in_near_RENAME_R.txt', sep = '\t', stringsAsFactors = FALSE)
+group2 <- read.delim('Table S7.txt', sep = '\t', stringsAsFactors = FALSE)
 
 Jilin_group2 <- subset(group2, SampleID %in% c("Within_Changbai_Mountain_Nature_Reserve_2019", "Near_Changbai_Mountain_Nature_Reserve_2019"))
 Jilin_group2
@@ -249,7 +249,7 @@ all_sample <- group$"SampleID"                                                  
 all_sample
 
 
-otu_table2 <- read.delim('1.9.2.3_clones_mix_in_near_clones_g-1_RENAME_R.txt', sep = '\t')
+otu_table2 <- read.delim('Table S2.txt', sep = '\t')
 
 Jilin_otu_table1 <- otu_table2[-which(c(otu_table2$Near_Changbai_Mountain_Nature_Reserve_2019 == 0.0 & otu_table2$Within_Changbai_Mountain_Nature_Reserve_2019 == 0.0)),]       ##取2019长白拥有clone的物种
 Jilin_otu_table1
@@ -260,7 +260,7 @@ Jilin_otu_table2
 Jilin_otu_table2$OTUID
 
 
-taxonomy2 <- read.delim('4.1_taxonomy_KPCOFGS_R.txt', sep = '\t', stringsAsFactors = FALSE)    #或者read.delim(file.choose(), sep = '\t', stringsAsFactors = FALSE)
+taxonomy2 <- read.delim('Table S9.txt', sep = '\t', stringsAsFactors = FALSE)    #或者read.delim(file.choose(), sep = '\t', stringsAsFactors = FALSE)
 
 
 
@@ -457,7 +457,7 @@ library(grid)
 circle_size = unit(1, 'snpc')    #规定圈图单位是像素（grid包的功能）
 
 
-group2 <- read.delim('3.2.3.3_sample-metadata_simple_next_mix_in_near_RENAME_R.txt', sep = '\t', stringsAsFactors = FALSE)
+group2 <- read.delim('Table S7.txt', sep = '\t', stringsAsFactors = FALSE)
 
 Hubei_group2 <- subset(group2, SampleID %in% c("Within_Shennongjia_Nature_Reserve"))
 Hubei_group2
@@ -474,7 +474,7 @@ all_sample <- group$"SampleID"                                                  
 all_sample
 
 
-otu_table2 <- read.delim('1.9.2.3_clones_mix_in_near_clones_g-1_RENAME_R.txt', sep = '\t')
+otu_table2 <- read.delim('Table S2.txt', sep = '\t')
 
 Hubei_otu_table1 <- otu_table2[-which(c(otu_table2$Within_Shennongjia_Nature_Reserve == 0.0)),]       ##取Hubei拥有clone的物种
 Hubei_otu_table1
@@ -485,7 +485,7 @@ Hubei_otu_table2
 Hubei_otu_table2$OTUID
 
 
-taxonomy2 <- read.delim('4.1_taxonomy_KPCOFGS_R.txt', sep = '\t', stringsAsFactors = FALSE)    #或者read.delim(file.choose(), sep = '\t', stringsAsFactors = FALSE)
+taxonomy2 <- read.delim('Table S9.txt', sep = '\t', stringsAsFactors = FALSE)    #或者read.delim(file.choose(), sep = '\t', stringsAsFactors = FALSE)
 
 
 
@@ -681,7 +681,7 @@ library(grid)
 circle_size = unit(1, 'snpc')    #规定圈图单位是像素（grid包的功能）
 
 
-group2 <- read.delim('3.2.3.3_sample-metadata_simple_next_mix_in_near_RENAME_R.txt', sep = '\t', stringsAsFactors = FALSE)
+group2 <- read.delim('Table S7.txt', sep = '\t', stringsAsFactors = FALSE)
 
 Hainan_group2 <- subset(group2, SampleID %in% c("Within_Jianfengling_Nature_Reserve", "Near_Jianfengling_Nature_Reserve"))
 Hainan_group2
@@ -698,7 +698,7 @@ all_sample <- group$"SampleID"                                                  
 all_sample
 
 
-otu_table2 <- read.delim('1.9.2.3_clones_mix_in_near_clones_g-1_RENAME_R.txt', sep = '\t')
+otu_table2 <- read.delim('Table S2.txt', sep = '\t')
 
 Hainan_otu_table1 <- otu_table2[-which(c(otu_table2$Near_Jianfengling_Nature_Reserve == 0.0 & otu_table2$Within_Jianfengling_Nature_Reserve == 0.0)),]       ##取长白拥有clone的物种
 Hainan_otu_table1
@@ -709,7 +709,7 @@ Hainan_otu_table2
 Hainan_otu_table2$OTUID
 
 
-taxonomy2 <- read.delim('4.1_taxonomy_KPCOFGS_R.txt', sep = '\t', stringsAsFactors = FALSE)    #或者read.delim(file.choose(), sep = '\t', stringsAsFactors = FALSE)
+taxonomy2 <- read.delim('Table S9.txt', sep = '\t', stringsAsFactors = FALSE)    #或者read.delim(file.choose(), sep = '\t', stringsAsFactors = FALSE)
 
 
 

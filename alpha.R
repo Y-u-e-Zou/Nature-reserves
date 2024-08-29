@@ -4,7 +4,7 @@
 library(vegan)
 library(picante)  
 #读入抽平后的otu表
-otuZY <- read.table("1.7.1_clones_g-1_R.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
+otuZY <- read.table("Table S1.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 otuZY
 otuZY_X10 <- otuZY * 10
 otuZY_X10
@@ -23,7 +23,7 @@ otu <- otuZY_1
 otu
 
 library(ape) #读取发育树用的包
-tree <- read.tree("9.4_dictyostelids_sequences_clones_delete_no_gap_weikemeng.rooted_R.nwk")
+tree <- read.tree("Tree S1.nwk")
 
 
 alpha_diversity <- function(x, tree = NULL) {
@@ -83,7 +83,7 @@ library(ggThemeAssist)
 library(vegan)
 library(picante)  
 #读入抽平后的otu表
-otuZY <- read.table("1.7.1_clones_g-1_R.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
+otuZY <- read.table("Table S1.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 otuZY
 otuZY_X10 <- otuZY * 10
 otuZY_X10
@@ -106,7 +106,7 @@ otu
 #如果需要计算谱系多样性，则再加载一个进化树文件otutree.tre： tree <- read.tree(file.choose())
 
 library(ape) #读取发育树用的包
-tree <- read.tree("9.4_dictyostelids_sequences_clones_delete_no_gap_weikemeng.rooted_R.nwk")
+tree <- read.tree("Tree S1.nwk")
 
 
 alpha_diversity <- function(x, tree = NULL) {
@@ -165,7 +165,7 @@ alpha_PD_Dic
 library(vegan)
 library(picante)  
 #读入抽平后的otu表
-otuZY <- read.table("1.7.1_clones_g-1_R.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
+otuZY <- read.table("Table S1.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 otuZY
 otuZY_X10 <- otuZY * 10
 otuZY_X10
@@ -188,7 +188,7 @@ otu
 #如果需要计算谱系多样性，则再加载一个进化树文件otutree.tre： tree <- read.tree(file.choose())
 
 library(ape) #读取发育树用的包
-tree <- read.tree("9.4_dictyostelids_sequences_clones_delete_no_gap_weikemeng.rooted_R.nwk")
+tree <- read.tree("Tree S1.nwk")
 
 
 alpha_diversity <- function(x, tree = NULL) {
@@ -247,7 +247,7 @@ alpha_PD_Pol
 library(vegan)
 library(picante)  
 #读入抽平后的otu表
-otuZY <- read.table("1.7.1_clones_g-1_R.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
+otuZY <- read.table("Table S1.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 otuZY
 otuZY_X10 <- otuZY * 10
 otuZY_X10
@@ -270,7 +270,7 @@ otu
 #如果需要计算谱系多样性，则再加载一个进化树文件otutree.tre： tree <- read.tree(file.choose())
 
 library(ape) #读取发育树用的包
-tree <- read.tree("9.4_dictyostelids_sequences_clones_delete_no_gap_weikemeng.rooted_R.nwk")
+tree <- read.tree("Tree S1.nwk")
 
 
 alpha_diversity <- function(x, tree = NULL) {
@@ -332,7 +332,7 @@ library(picante)
 #读入抽平后的otu表
 #otuZY_1 <- read.csv("1.9.2.4_clones_mix_in_near_clones_g-1_RENAME_x10for_diversity_R.csv", header=T, row.names = 1) #或者读xls格式otu <- read.delim(file.choose(), row.names = 1, sep = '\t', stringsAsFactors = FALSE, check.names = FALSE) 
 #或者读取txt格式的表 otu <- read.table(file.choose(), header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
-otuZY <- read.table("1.7.1_clones_g-1_R.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
+otuZY <- read.table("Table S1.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 otuZY
 otuZY_X10 <- otuZY * 10
 otuZY_X10
@@ -355,7 +355,7 @@ otu
 #如果需要计算谱系多样性，则再加载一个进化树文件otutree.tre： tree <- read.tree(file.choose())
 
 library(ape) #读取发育树用的包
-tree <- read.tree("9.4_dictyostelids_sequences_clones_delete_no_gap_weikemeng.rooted_R.nwk")
+tree <- read.tree("Tree S1.nwk")
 
 
 alpha_diversity <- function(x, tree = NULL) {
@@ -425,301 +425,10 @@ alpha_PD_merge_all<- merge(alpha_PD_merge_CDPH, alpha_PD_Rap, by = 'Type', all =
 rownames(alpha_PD_merge_all) <- alpha_PD_merge_all$Type
 alpha_PD_merge_all
 alpha_PD_merge_all <- alpha_PD_merge_all[,-which(names(alpha_PD_merge_all) == "Type")]    #删除type列
-write.csv(alpha_PD_merge_all,"α多样性各样点分属_1.9.2.3_9.4各类多样性.csv", quote = FALSE) #1.7.1
+write.csv(alpha_PD_merge_all,"Table S4.csv", quote = FALSE) #1.7.1
 
 
 #===========================================================================================================
-#α各样点分属谱系多样性
-#α多样性三地保护区内外Cavenderia clones_g-1比较
-library(vegan)
-library(picante)  
-#读入抽平后的otu表
-#otuZY_1 <- read.csv("1.9.2.4_clones_mix_in_near_clones_g-1_RENAME_x10for_diversity_R.csv", header=T, row.names = 1) #或者读xls格式otu <- read.delim(file.choose(), row.names = 1, sep = '\t', stringsAsFactors = FALSE, check.names = FALSE) 
-#或者读取txt格式的表 otu <- read.table(file.choose(), header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
-otuZY <- read.table("1.7.1_clones_g-1_R.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
-otuZY
-otuZY_X10 <- otuZY * 10
-otuZY_X10
-
-#去除非Cavenderia的行
-otuZY_X10_Cav <- otuZY_X10[-which(c(rownames(otuZY_X10) != "Cavenderia_bifurcatimacrosorum") & rownames(otuZY_X10) != "Cavenderia_fasciculaticomplexispora" & rownames(otuZY_X10) != "Cavenderia_inordinata" & rownames(otuZY_X10) != "Cavenderia_varicelloides"),]
-otuZY_X10_Cav
-
-
-#将otu数据转置
-otuZY_1 <- t(otuZY_X10_Cav)
-otuZY_1
-# otu <- otuZY_1 * 100    #将otu表整体乘100，以便计算多样性
-otu <- otuZY_1
-
-otu
-
-#如果需要计算谱系多样性，则再加载一个进化树文件otutree.tre： tree <- read.tree(file.choose())
-
-library(ape) #读取发育树用的包
-tree <- read.tree("9.4_dictyostelids_sequences_clones_delete_no_gap_weikemeng.rooted_R.nwk")
-
-
-alpha_diversity <- function(x, tree = NULL) {
-  
-  if (!is.null(tree)) {
-    PD_whole_tree_Cav <- pd(x, tree, include.root = TRUE)[1]     #这里是计算了谱系多样性（PD），include.root = FALSE不计算单一物种，include.root = TRUE能计算群落里只有一个物种时，但需要有根树
-    names(PD_whole_tree_Cav) <- 'PD_whole_tree_Cav'
-    result <- cbind(PD_whole_tree_Cav)
-    
-    result <- data.frame(
-      PD_whole_tree_Cav
-    )
-  }
-  result
-}
-
-#需要计算谱系多样性时，需要指定进化树文件
-alpha_PD_Cav <- alpha_diversity (otu, tree)
-alpha_PD_Cav
-
-
-
-
-
-
-
-#α多样性三地保护区内外Dictyostelium clones_g-1比较
-library(vegan)
-library(picante)  
-#读入抽平后的otu表
-#otuZY_1 <- read.csv("1.9.2.4_clones_mix_in_near_clones_g-1_RENAME_x10for_diversity_R.csv", header=T, row.names = 1) #或者读xls格式otu <- read.delim(file.choose(), row.names = 1, sep = '\t', stringsAsFactors = FALSE, check.names = FALSE) 
-#或者读取txt格式的表 otu <- read.table(file.choose(), header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
-otuZY <- read.table("1.7.1_clones_g-1_R.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
-otuZY
-otuZY_X10 <- otuZY * 10
-otuZY_X10
-
-#去除非Dictyostelium的行
-library(dplyr)
-otuZY_X10$type <- rownames(otuZY_X10)      #在otuZY_X10里加一个列type，内容是行名
-#dplyr::filter(otuZY_X10, !grepl('Dictyostelium', type))   #删除行名含Dictyostelium的行
-otuZY_X10_Dic <- dplyr::filter(otuZY_X10, grepl('Dictyostelium', type))   #筛选出行名含Dictyostelium的行
-otuZY_X10_Dic <- otuZY_X10_Dic[,-which(names(otuZY_X10_Dic) == "type")]    #删除type列
-otuZY_X10_Dic
-#将otu数据转置
-otuZY_1 <- t(otuZY_X10_Dic)
-otuZY_1
-# otu <- otuZY_1 * 100    #将otu表整体乘100，以便计算多样性
-otu <- otuZY_1
-
-otu
-
-#如果需要计算谱系多样性，则再加载一个进化树文件otutree.tre： tree <- read.tree(file.choose())
-
-library(ape) #读取发育树用的包
-tree <- read.tree("9.4_dictyostelids_sequences_clones_delete_no_gap_weikemeng.rooted_R.nwk")
-
-
-alpha_diversity <- function(x, tree = NULL) {
-  
-  if (!is.null(tree)) {
-    PD_whole_tree_Dic <- pd(x, tree, include.root = TRUE)[1]     #这里是计算了谱系多样性（PD），include.root = FALSE不计算单一物种，include.root = TRUE能计算群落里只有一个物种时，但需要有根树
-    names(PD_whole_tree_Dic) <- 'PD_whole_tree_Dic'
-    result <- cbind(PD_whole_tree_Dic)
-    
-    result <- data.frame(
-      PD_whole_tree_Dic
-    )
-  }
-  result
-}
-
-#需要计算谱系多样性时，需要指定进化树文件
-alpha_PD_Dic <- alpha_diversity (otu, tree)
-alpha_PD_Dic
-
-
-
-
-
-
-
-#α多样性三地保护区内外Polysphondylium clones_g-1比较
-library(vegan)
-library(picante)  
-#读入抽平后的otu表
-otuZY <- read.table("1.7.1_clones_g-1_R.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
-otuZY
-otuZY_X10 <- otuZY * 10
-otuZY_X10
-
-#去除非Polysphondylium的行
-library(dplyr)
-otuZY_X10$type <- rownames(otuZY_X10)      #在otuZY_X10里加一个列type，内容是行名
-#dplyr::filter(otuZY_X10, !grepl('Polysphondylium', type))   #删除行名含Polysphondylium的行
-otuZY_X10_Pol <- dplyr::filter(otuZY_X10, grepl('Polysphondylium', type))   #筛选出行名含Polysphondylium的行
-otuZY_X10_Pol <- otuZY_X10_Pol[,-which(names(otuZY_X10_Pol) == "type")]    #删除type列
-otuZY_X10_Pol
-#将otu数据转置
-otuZY_1 <- t(otuZY_X10_Pol)
-otuZY_1
-# otu <- otuZY_1 * 100    #将otu表整体乘100，以便计算多样性
-otu <- otuZY_1
-
-otu
-
-#如果需要计算谱系多样性，则再加载一个进化树文件otutree.tre： tree <- read.tree(file.choose())
-
-library(ape) #读取发育树用的包
-tree <- read.tree("9.4_dictyostelids_sequences_clones_delete_no_gap_weikemeng.rooted_R.nwk")
-
-
-alpha_diversity <- function(x, tree = NULL) {
-  
-  if (!is.null(tree)) {
-    PD_whole_tree_Pol <- pd(x, tree, include.root = TRUE)[1]     #这里是计算了谱系多样性（PD），include.root = FALSE不计算单一物种，include.root = TRUE能计算群落里只有一个物种时，但需要有根树
-    names(PD_whole_tree_Pol) <- 'PD_whole_tree_Pol'
-    result <- cbind(PD_whole_tree_Pol)
-    
-    result <- data.frame(
-      PD_whole_tree_Pol
-    )
-  }
-  result
-}
-
-#需要计算谱系多样性时，需要指定进化树文件
-alpha_PD_Pol <- alpha_diversity (otu, tree)
-alpha_PD_Pol
-#做谱系多样性时，则输出
-
-
-
-
-
-
-#α多样性三地保护区内外Hagiwaraea clones_g-1比较
-library(vegan)
-library(picante)  
-#读入抽平后的otu表
-otuZY <- read.table("1.7.1_clones_g-1_R  ###########################Table. S1..txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
-otuZY
-otuZY_X10 <- otuZY * 10
-otuZY_X10
-
-#去除非Hagiwaraea的行
-library(dplyr)
-otuZY_X10$type <- rownames(otuZY_X10)      #在otuZY_X10里加一个列type，内容是行名
-#dplyr::filter(otuZY_X10, !grepl('Hagiwaraea', type))   #删除行名含Hagiwaraea的行
-otuZY_X10_Hag <- dplyr::filter(otuZY_X10, grepl('Hagiwaraea', type))   #筛选出行名含Hagiwaraea的行
-otuZY_X10_Hag <- otuZY_X10_Hag[,-which(names(otuZY_X10_Hag) == "type")]    #删除type列
-otuZY_X10_Hag
-#将otu数据转置
-otuZY_1 <- t(otuZY_X10_Hag)
-otuZY_1
-# otu <- otuZY_1 * 100    #将otu表整体乘100，以便计算多样性
-otu <- otuZY_1
-
-otu
-
-#如果需要计算谱系多样性，则再加载一个进化树文件otutree.tre： tree <- read.tree(file.choose())
-
-library(ape) #读取发育树用的包
-tree <- read.tree("9.4_dictyostelids_sequences_clones_delete_no_gap_weikemeng.rooted_R.nwk")
-
-
-alpha_diversity <- function(x, tree = NULL) {
-  
-  if (!is.null(tree)) {
-    PD_whole_tree_Hag <- pd(x, tree, include.root = TRUE)[1]     #这里是计算了谱系多样性（PD），include.root = FALSE不计算单一物种，include.root = TRUE能计算群落里只有一个物种时，但需要有根树
-    names(PD_whole_tree_Hag) <- 'PD_whole_tree_Hag'
-    result <- cbind(PD_whole_tree_Hag)
-    
-    result <- data.frame(
-      PD_whole_tree_Hag
-    )
-  }
-  result
-}
-
-#需要计算谱系多样性时，需要指定进化树文件
-alpha_PD_Hag <- alpha_diversity (otu, tree)
-alpha_PD_Hag
-
-
-
-
-
-
-
-
-#α多样性三地保护区内外Raperostelium clones_g-1比较
-library(vegan)
-library(picante)  
-#读入抽平后的otu表
-
-otuZY <- read.table("1.7.1_clones_g-1_R.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
-otuZY
-otuZY_X10 <- otuZY * 10
-otuZY_X10
-
-#去除非Raperostelium的行
-library(dplyr)
-otuZY_X10$type <- rownames(otuZY_X10)      #在otuZY_X10里加一个列type，内容是行名
-#dplyr::filter(otuZY_X10, !grepl('Raperostelium', type))   #删除行名含Raperostelium的行
-otuZY_X10_Rap <- dplyr::filter(otuZY_X10, grepl('Raperostelium', type))   #筛选出行名含Raperostelium的行
-otuZY_X10_Rap <- otuZY_X10_Rap[,-which(names(otuZY_X10_Rap) == "type")]    #删除type列
-otuZY_X10_Rap
-#将otu数据转置
-otuZY_1 <- t(otuZY_X10_Rap)
-otuZY_1
-# otu <- otuZY_1 * 100    #将otu表整体乘100，以便计算多样性
-otu <- otuZY_1
-
-otu
-
-
-library(ape) #读取发育树用的包
-tree <- read.tree("9.4_dictyostelids_sequences_clones_delete_no_gap_weikemeng.rooted_R.nwk")
-
-
-alpha_diversity <- function(x, tree = NULL) {
-  
-  if (!is.null(tree)) {
-    PD_whole_tree_Rap <- pd(x, tree, include.root = TRUE)[1]     #这里是计算了谱系多样性（PD），include.root = FALSE不计算单一物种，include.root = TRUE能计算群落里只有一个物种时，但需要有根树
-    names(PD_whole_tree_Rap) <- 'PD_whole_tree_Rap'
-    result <- cbind(PD_whole_tree_Rap)
-    
-    result <- data.frame(
-      PD_whole_tree_Rap
-    )
-  }
-  result
-}
-
-#需要计算谱系多样性时，需要指定进化树文件
-alpha_PD_Rap <- alpha_diversity (otu, tree)
-alpha_PD_Rap
-#做谱系多样性时，则输出
-
-
-alpha_PD_Cav$Type <- rownames(alpha_PD_Cav)
-alpha_PD_Dic$Type <- rownames(alpha_PD_Dic)
-alpha_PD_Pol$Type <- rownames(alpha_PD_Pol)
-alpha_PD_Hag$Type <- rownames(alpha_PD_Hag)
-alpha_PD_Rap$Type <- rownames(alpha_PD_Rap)
-
-
-#合并多表并作图
-alpha_PD_merge_CD <- merge(alpha_PD_Cav, alpha_PD_Dic, by = 'Type', all = FALSE)
-
-alpha_PD_merge_PH <- merge(alpha_PD_Pol, alpha_PD_Hag, by = 'Type', all = FALSE) 
-
-alpha_PD_merge_CDPH  <- merge(alpha_PD_merge_CD, alpha_PD_merge_PH, by = 'Type', all = FALSE) 
-
-alpha_PD_merge_all<- merge(alpha_PD_merge_CDPH, alpha_PD_Rap, by = 'Type', all = FALSE)
-
-rownames(alpha_PD_merge_all) <- alpha_PD_merge_all$Type
-alpha_PD_merge_all
-alpha_PD_merge_all <- alpha_PD_merge_all[,-which(names(alpha_PD_merge_all) == "Type")]    #删除type列
-write.csv(alpha_PD_merge_all,"α多样性各样点分属_1.9.2.3_9.4谱系.csv", quote = FALSE)   #实际上是1.7.1
-
 #==========================================================================================================================
 library(vegan)
 library(picante)  
@@ -727,7 +436,7 @@ library(picante)
 #otuZY_1 <- read.csv("1.7.2_clones_g-1X10_R.csv", header=T, row.names = 1) #或者读xls格式otu <- read.delim(file.choose(), row.names = 1, sep = '\t', stringsAsFactors = FALSE, check.names = FALSE) 
 #或者读取txt格式的表 otu <- read.table(file.choose(), header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 #将otu数据转置
-otuZY <- read.table("1.7.1_clones_g-1_R.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
+otuZY <- read.table("Table S1.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 otuZY
 otuZY_X10 <- otuZY * 10
 otuZY_X10
@@ -804,7 +513,7 @@ write.csv(alpha,"α多样性计算结果-ZY_1.7.2.csv", quote = FALSE)  #或者 
 alpha1 <- alpha_diversity (otu, tree)
 alpha1
 #做谱系多样性时，则输出
-write.csv(alpha1,"α多样性计算结果谱系-ZY_1.7.2.csv", quote = FALSE)
+write.csv(alpha1,"Table S5.csv", quote = FALSE)
 
 
 #========================================================================================================================
@@ -812,7 +521,7 @@ write.csv(alpha1,"α多样性计算结果谱系-ZY_1.7.2.csv", quote = FALSE)
 library(vegan)
 library(picante)  
 #读入抽平后的otu表
-otuZY <- read.table("1.9.2.3_clones_mix_in_near_clones_g-1_RENAME_R.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
+otuZY <- read.table("Table S2.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 otuZY
 otuZY_X10 <- otuZY * 10
 otuZY_X10
@@ -827,7 +536,7 @@ otu
 
 
 library(ape) #读取发育树用的包
-tree <- read.tree("9.4_dictyostelids_sequences_clones_delete_no_gap_weikemeng.rooted_R.nwk")
+tree <- read.tree("Tree S1.nwk")
 
 
 alpha_diversity <- function(x, tree = NULL) {
@@ -887,11 +596,11 @@ alpha_diversity <- function(x, tree = NULL) {
 alpha_PD <- alpha_diversity (otu, tree)
 alpha_PD
 #做谱系多样性时，则输出
-write.csv(alpha_PD,"α多样性三地保护区内外clones_g-1比较_1.9.2.3_9.4谱系.csv", quote = FALSE)
+write.csv(alpha_PD,"Table S3.csv", quote = FALSE)
 
 
 #做图
-alpha_PD <- read.csv("α多样性三地保护区内外clones_g-1比较_1.9.2.3_9.4谱系.csv", header=T, row.names = 1)
+alpha_PD <- read.csv("Table S3.csv", header=T, row.names = 1)
 
 
 
@@ -982,283 +691,3 @@ dev.off()
 
 
 #===========================================================================================================
-
-#α多样性三地保护区内外Cavenderia clones_g-1比较
-
-library(vegan)
-library(picante)  
-#读入抽平后的otu表
-otuZY <- read.table("1.9.2.3_clones_mix_in_near_clones_g-1_RENAME_R.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
-otuZY
-otuZY_X10 <- otuZY * 10
-otuZY_X10
-
-#去除非Cavenderia的行
-otuZY_X10_Cav <- otuZY_X10[-which(c(rownames(otuZY_X10) != "Cavenderia_bifurcatimacrosorum") & rownames(otuZY_X10) != "Cavenderia_fasciculaticomplexispora" & rownames(otuZY_X10) != "Cavenderia_inordinata" & rownames(otuZY_X10) != "Cavenderia_varicelloides"),]
-otuZY_X10_Cav
-
-
-#将otu数据转置
-otuZY_1 <- t(otuZY_X10_Cav)
-otuZY_1
-# otu <- otuZY_1 * 100    #将otu表整体乘100，以便计算多样性
-otu <- otuZY_1
-
-otu
-
-#如果需要计算谱系多样性，则再加载一个进化树文件otutree.tre： tree <- read.tree(file.choose())
-
-library(ape) #读取发育树用的包
-tree <- read.tree("9.4_dictyostelids_sequences_clones_delete_no_gap_weikemeng.rooted_R.nwk")
-
-
-alpha_diversity <- function(x, tree = NULL) {
-  
-  if (!is.null(tree)) {
-    PD_whole_tree_Cav <- pd(x, tree, include.root = TRUE)[1]     #这里是计算了谱系多样性（PD），include.root = FALSE不计算单一物种，include.root = TRUE能计算群落里只有一个物种时，但需要有根树
-    names(PD_whole_tree_Cav) <- 'PD_whole_tree_Cav'
-    result <- cbind(PD_whole_tree_Cav)
-    
-    result <- data.frame(
-      PD_whole_tree_Cav
-    )
-  }
-  result
-}
-
-#需要计算谱系多样性时，需要指定进化树文件
-alpha_PD_Cav <- alpha_diversity (otu, tree)
-alpha_PD_Cav
-
-
-
-
-
-
-#α多样性三地保护区内外Dictyostelium clones_g-1比较
-library(ggThemeAssist)
-library(vegan)
-library(picante)  
-#读入抽平后的otu表
-otuZY <- read.table("1.9.2.3_clones_mix_in_near_clones_g-1_RENAME_R.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
-otuZY
-otuZY_X10 <- otuZY * 10
-otuZY_X10
-
-#去除非Dictyostelium的行
-library(dplyr)
-otuZY_X10$type <- rownames(otuZY_X10)      #在otuZY_X10里加一个列type，内容是行名
-#dplyr::filter(otuZY_X10, !grepl('Dictyostelium', type))   #删除行名含Dictyostelium的行
-otuZY_X10_Dic <- dplyr::filter(otuZY_X10, grepl('Dictyostelium', type))   #筛选出行名含Dictyostelium的行
-otuZY_X10_Dic <- otuZY_X10_Dic[,-which(names(otuZY_X10_Dic) == "type")]    #删除type列
-otuZY_X10_Dic
-#将otu数据转置
-otuZY_1 <- t(otuZY_X10_Dic)
-otuZY_1
-# otu <- otuZY_1 * 100    #将otu表整体乘100，以便计算多样性
-otu <- otuZY_1
-
-otu
-
-
-library(ape) #读取发育树用的包
-tree <- read.tree("9.4_dictyostelids_sequences_clones_delete_no_gap_weikemeng.rooted_R.nwk")
-
-
-alpha_diversity <- function(x, tree = NULL) {
-  
-  if (!is.null(tree)) {
-    PD_whole_tree_Dic <- pd(x, tree, include.root = TRUE)[1]     #这里是计算了谱系多样性（PD），include.root = FALSE不计算单一物种，include.root = TRUE能计算群落里只有一个物种时，但需要有根树
-    names(PD_whole_tree_Dic) <- 'PD_whole_tree_Dic'
-    result <- cbind(PD_whole_tree_Dic)
-    
-    result <- data.frame(
-      PD_whole_tree_Dic
-    )
-  }
-  result
-}
-
-#需要计算谱系多样性时，需要指定进化树文件
-alpha_PD_Dic <- alpha_diversity (otu, tree)
-alpha_PD_Dic
-
-
-
-
-
-
-
-#α多样性三地保护区内外Polysphondylium clones_g-1比较
-library(ggThemeAssist)
-library(vegan)
-library(picante)  
-#读入抽平后的otu表
-otuZY <- read.table("1.9.2.3_clones_mix_in_near_clones_g-1_RENAME_R.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
-otuZY
-otuZY_X10 <- otuZY * 10
-otuZY_X10
-
-#去除非Polysphondylium的行
-library(dplyr)
-otuZY_X10$type <- rownames(otuZY_X10)      #在otuZY_X10里加一个列type，内容是行名
-otuZY_X10_Pol <- dplyr::filter(otuZY_X10, grepl('Polysphondylium', type))   #筛选出行名含Polysphondylium的行
-otuZY_X10_Pol <- otuZY_X10_Pol[,-which(names(otuZY_X10_Pol) == "type")]    #删除type列
-otuZY_X10_Pol
-#将otu数据转置
-otuZY_1 <- t(otuZY_X10_Pol)
-otuZY_1
-# otu <- otuZY_1 * 100    #将otu表整体乘100，以便计算多样性
-otu <- otuZY_1
-
-otu
-
-
-
-library(ape) #读取发育树用的包
-tree <- read.tree("9.4_dictyostelids_sequences_clones_delete_no_gap_weikemeng.rooted_R.nwk")
-
-
-alpha_diversity <- function(x, tree = NULL) {
-  
-  if (!is.null(tree)) {
-    PD_whole_tree_Pol <- pd(x, tree, include.root = TRUE)[1]     #这里是计算了谱系多样性（PD），include.root = FALSE不计算单一物种，include.root = TRUE能计算群落里只有一个物种时，但需要有根树
-    names(PD_whole_tree_Pol) <- 'PD_whole_tree_Pol'
-    result <- cbind(PD_whole_tree_Pol)
-    
-    result <- data.frame(
-      PD_whole_tree_Pol
-    )
-  }
-  result
-}
-
-#需要计算谱系多样性时，需要指定进化树文件
-alpha_PD_Pol <- alpha_diversity (otu, tree)
-alpha_PD_Pol
-
-
-
-
-
-
-#α多样性三地保护区内外Hagiwaraea clones_g-1比较
-library(vegan)
-library(picante)  
-#读入抽平后的otu表
-otuZY <- read.table("1.9.2.3_clones_mix_in_near_clones_g-1_RENAME_R.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
-otuZY
-otuZY_X10 <- otuZY * 10
-otuZY_X10
-
-#去除非Hagiwaraea的行
-library(dplyr)
-otuZY_X10$type <- rownames(otuZY_X10)      #在otuZY_X10里加一个列type，内容是行名
-otuZY_X10_Hag <- dplyr::filter(otuZY_X10, grepl('Hagiwaraea', type))   #筛选出行名含Hagiwaraea的行
-otuZY_X10_Hag <- otuZY_X10_Hag[,-which(names(otuZY_X10_Hag) == "type")]    #删除type列
-otuZY_X10_Hag
-#将otu数据转置
-otuZY_1 <- t(otuZY_X10_Hag)
-otuZY_1
-# otu <- otuZY_1 * 100    #将otu表整体乘100，以便计算多样性
-otu <- otuZY_1
-
-otu
-
-
-library(ape) #读取发育树用的包
-tree <- read.tree("9.4_dictyostelids_sequences_clones_delete_no_gap_weikemeng.rooted_R.nwk")
-
-
-alpha_diversity <- function(x, tree = NULL) {
-  
-  if (!is.null(tree)) {
-    PD_whole_tree_Hag <- pd(x, tree, include.root = TRUE)[1]     #这里是计算了谱系多样性（PD），include.root = FALSE不计算单一物种，include.root = TRUE能计算群落里只有一个物种时，但需要有根树
-    names(PD_whole_tree_Hag) <- 'PD_whole_tree_Hag'
-    result <- cbind(PD_whole_tree_Hag)
-    
-    result <- data.frame(
-      PD_whole_tree_Hag
-    )
-  }
-  result
-}
-
-#需要计算谱系多样性时，需要指定进化树文件
-alpha_PD_Hag <- alpha_diversity (otu, tree)
-alpha_PD_Hag
-
-
-
-
-
-
-
-#α多样性三地保护区内外Raperostelium clones_g-1比较
-library(vegan)
-library(picante)  
-#读入抽平后的otu表
-otuZY <- read.table("1.9.2.3_clones_mix_in_near_clones_g-1_RENAME_R.txt", header=T, sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
-otuZY
-otuZY_X10 <- otuZY * 10
-otuZY_X10
-
-#去除非Raperostelium的行
-library(dplyr)
-otuZY_X10$type <- rownames(otuZY_X10)      #在otuZY_X10里加一个列type，内容是行名
-otuZY_X10_Rap <- dplyr::filter(otuZY_X10, grepl('Raperostelium', type))   #筛选出行名含Raperostelium的行
-otuZY_X10_Rap <- otuZY_X10_Rap[,-which(names(otuZY_X10_Rap) == "type")]    #删除type列
-otuZY_X10_Rap
-#将otu数据转置
-otuZY_1 <- t(otuZY_X10_Rap)
-otuZY_1
-otu <- otuZY_1
-
-otu
-
-
-
-library(ape) #读取发育树用的包
-tree <- read.tree("9.4_dictyostelids_sequences_clones_delete_no_gap_weikemeng.rooted_R.nwk")
-
-
-alpha_diversity <- function(x, tree = NULL) {
-  
-  if (!is.null(tree)) {
-    PD_whole_tree_Rap <- pd(x, tree, include.root = TRUE)[1]     #这里是计算了谱系多样性（PD），include.root = FALSE不计算单一物种，include.root = TRUE能计算群落里只有一个物种时，但需要有根树
-    names(PD_whole_tree_Rap) <- 'PD_whole_tree_Rap'
-    result <- cbind(PD_whole_tree_Rap)
-    
-    result <- data.frame(
-      PD_whole_tree_Rap
-    )
-  }
-  result
-}
-
-#需要计算谱系多样性时，需要指定进化树文件
-alpha_PD_Rap <- alpha_diversity (otu, tree)
-alpha_PD_Rap
-
-
-alpha_PD_Cav$Type <- rownames(alpha_PD_Cav)
-alpha_PD_Dic$Type <- rownames(alpha_PD_Dic)
-alpha_PD_Pol$Type <- rownames(alpha_PD_Pol)
-alpha_PD_Hag$Type <- rownames(alpha_PD_Hag)
-alpha_PD_Rap$Type <- rownames(alpha_PD_Rap)
-
-
-#合并多表并作图
-alpha_PD_merge_CD <- merge(alpha_PD_Cav, alpha_PD_Dic, by = 'Type', all = FALSE)
-
-alpha_PD_merge_PH <- merge(alpha_PD_Pol, alpha_PD_Hag, by = 'Type', all = FALSE) 
-
-alpha_PD_merge_CDPH  <- merge(alpha_PD_merge_CD, alpha_PD_merge_PH, by = 'Type', all = FALSE) 
-
-alpha_PD_merge_all<- merge(alpha_PD_merge_CDPH, alpha_PD_Rap, by = 'Type', all = FALSE)
-
-rownames(alpha_PD_merge_all) <- alpha_PD_merge_all$Type
-alpha_PD_merge_all
-alpha_PD_merge_all <- alpha_PD_merge_all[,-which(names(alpha_PD_merge_all) == "Type")]    #删除type列
-write.csv(alpha_PD_merge_all,"α多样性三地保护区内外分属_1.9.2.3_9.4谱系.csv", quote = FALSE)
-

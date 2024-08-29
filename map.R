@@ -22,7 +22,7 @@ JiHuHai_map <- China_map %>%
 # 绘制球体地图
 
 
-stptp<- read.table("3.3.2_environment_R.xls", header=T, sep="\t", comment.char="", stringsAsFactors = F)
+stptp<- read.table("Table S6.xls", header=T, sep="\t", comment.char="", stringsAsFactors = F)
 scatter_df_tro <- st_as_sf(stptp,coords = c("Longitude", "Latitude"),crs = 4326)
 
 
