@@ -1,8 +1,8 @@
 #============================================================================================
 #所有保护区内外α多样性和环境-经纬度和气候带和保护区
 library(picante) 
-otuZY_1 <- read.csv("α多样性计算结果谱系-ZY_1.7.2.csv", header=T, row.names = 1)
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+otuZY_1 <- read.csv("Table. S5.csv", header=T, row.names = 1)
+meta1 <- read.table("Table. S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 #去掉非经纬度、气候带和保护区列
 meta1 <- meta1[,-which(c(names(meta1) == "Elevation"))]
@@ -159,8 +159,8 @@ dev.off()
 #============================================================================================
 #仅保护区内α多样性和环境-经纬度和气候带和保护区
 library(picante) 
-otuZY_1 <- read.csv("α多样性计算结果谱系-ZY_1.7.2.csv", header=T, row.names = 1)
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+otuZY_1 <- read.csv("Table. S5.csv", header=T, row.names = 1)
+meta1 <- read.table("Table. S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 #去掉非经纬度、气候带列
 meta1 <- meta1[,-which(c(names(meta1) == "Elevation"))]
@@ -320,8 +320,8 @@ dev.off()
 #============================================================================================
 #属-所有保护区内外α多样性和环境-经纬度和气候带
 library(picante) 
-otuZY_1 <- read.csv("α多样性各样点分属_1.9.2.3_9.4各类多样性.csv", header=T, row.names = 1)
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+otuZY_1 <- read.csv("Table. S4.csv", header=T, row.names = 1)
+meta1 <- read.table("Table. S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 
 #去掉拥有Tnf和NaN数值的Pielou和Inverse.Simpson
@@ -485,8 +485,8 @@ dev.off()
 #============================================================================================
 #属-仅保护区内α多样性和环境-经纬度和气候带
 library(picante) 
-otuZY_1 <- read.csv("α多样性各样点分属_1.9.2.3_9.4各类多样性.csv", header=T, row.names = 1)
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+otuZY_1 <- read.csv("Table. S4.csv", header=T, row.names = 1)
+meta1 <- read.table("Table. S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 
 #去掉拥有Tnf和NaN数值的Pielou和Inverse.Simpson
@@ -653,8 +653,8 @@ dev.off()
 #============================================================================================
 #18+19长白山保护区内外α多样性和环境_1.7.2
 library(picante) 
-otuZY_1 <- read.csv("α多样性计算结果谱系-ZY_1.7.2.csv", header=T, row.names = 1)
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+otuZY_1 <- read.csv("Table. S5.csv", header=T, row.names = 1)
+meta1 <- read.table("Table. S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 #去掉Disturbance列
 meta1 <- meta1[,-which(c(names(meta1) == "Disturbance"))]
@@ -816,8 +816,8 @@ dev.off()
 #============================================================================================
 #18+19长白山仅保护区内α多样性和环境_1.7.2
 library(picante) 
-otuZY_1 <- read.csv("α多样性计算结果谱系-ZY_1.7.2.csv", header=T, row.names = 1)
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+otuZY_1 <- read.csv("Table. S5.csv", header=T, row.names = 1)
+meta1 <- read.table("Table. S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 #去掉Nature_Reserve列
 meta1 <- meta1[,-which(c(names(meta1) == "Nature_Reserve"))]
@@ -974,8 +974,8 @@ dev.off()
 #============================================================================================
 #湖北仅保护区内α多样性和环境_1.7.2
 library(picante) 
-otuZY_1 <- read.csv("α多样性计算结果谱系-ZY_1.7.2.csv", header=T, row.names = 1)
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+otuZY_1 <- read.csv("Table. S5.csv", header=T, row.names = 1)
+meta1 <- read.table("Table. S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 #去掉Nature_Reserve列
 meta1 <- meta1[,-which(c(names(meta1) == "Nature_Reserve"))]
@@ -1137,8 +1137,8 @@ dev.off()
 #============================================================================================
 #海南保护区内外α多样性和环境_1.7.2
 library(picante) 
-otuZY_1 <- read.csv("α多样性计算结果谱系-ZY_1.7.2.csv", header=T, row.names = 1)
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+otuZY_1 <- read.csv("Table. S5.csv", header=T, row.names = 1)
+meta1 <- read.table("Table. S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 #去掉Disturbance列
 meta1 <- meta1[,-which(c(names(meta1) == "Disturbance"))]
@@ -1306,8 +1306,8 @@ dev.off()
 #============================================================================================
 #海南仅保护区内α多样性和环境_1.7.2
 library(picante) 
-otuZY_1 <- read.csv("α多样性计算结果谱系-ZY_1.7.2.csv", header=T, row.names = 1)
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+otuZY_1 <- read.csv("Table. S5.csv", header=T, row.names = 1)
+meta1 <- read.table("Table. S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 #去掉Nature_Reserve列
 meta1 <- meta1[,-which(c(names(meta1) == "Nature_Reserve"))]
@@ -1469,8 +1469,8 @@ dev.off()
 #============================================================================================
 #属-18+19长白山保护区内外α多样性和环境_1.7.2
 library(picante) 
-otuZY_1 <- read.csv("α多样性各样点分属_1.9.2.3_9.4各类多样性.csv", header=T, row.names = 1)
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+otuZY_1 <- read.csv("Table. S4.csv", header=T, row.names = 1)
+meta1 <- read.table("Table. S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 
 #去掉拥有Tnf和NaN数值的Pielou和Inverse.Simpson
@@ -1638,8 +1638,8 @@ dev.off()
 #============================================================================================
 #属-18+19长白山仅保护区内α多样性和环境_1.7.2
 library(picante) 
-otuZY_1 <- read.csv("α多样性各样点分属_1.9.2.3_9.4各类多样性.csv", header=T, row.names = 1)
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+otuZY_1 <- read.csv("Table. S4.csv", header=T, row.names = 1)
+meta1 <- read.table("Table. S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 
 #去掉拥有Tnf和NaN数值的Pielou和Inverse.Simpson
@@ -1802,8 +1802,8 @@ dev.off()
 #============================================================================================
 #属-湖北仅保护区内α多样性和环境_1.7.2
 library(picante) 
-otuZY_1 <- read.csv("α多样性各样点分属_1.9.2.3_9.4各类多样性.csv", header=T, row.names = 1)
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+otuZY_1 <- read.csv("Table. S4.csv", header=T, row.names = 1)
+meta1 <- read.table("Table. S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 
 #去掉拥有Tnf和NaN数值的Pielou和Inverse.Simpson
@@ -1971,8 +1971,8 @@ dev.off()
 #============================================================================================
 #属-海南保护区内外α多样性和环境_1.7.2
 library(picante) 
-otuZY_1 <- read.csv("α多样性各样点分属_1.9.2.3_9.4各类多样性.csv", header=T, row.names = 1)
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+otuZY_1 <- read.csv("Table. S4.csv", header=T, row.names = 1)
+meta1 <- read.table("Table. S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 
 #去掉拥有Tnf和NaN数值的Pielou和Inverse.Simpson
@@ -2147,8 +2147,8 @@ dev.off()
 #============================================================================================
 #属-海南仅保护区内α多样性和环境_1.7.2
 library(picante) 
-otuZY_1 <- read.csv("α多样性各样点分属_1.9.2.3_9.4各类多样性.csv", header=T, row.names = 1)
-meta1 <- read.table("3.2.1.5_sample-metadata_simple_next_filter_R.txt", header=T, 
+otuZY_1 <- read.csv("Table. S4.csv", header=T, row.names = 1)
+meta1 <- read.table("Table. S6.txt", header=T, 
                     sep="\t", quote = "", row.names=1, comment.char="",stringsAsFactors = FALSE)
 
 #去掉拥有Tnf和NaN数值的Pielou和Inverse.Simpson
